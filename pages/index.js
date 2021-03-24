@@ -3,7 +3,10 @@ import axios from 'axios';
 import moment from 'moment';
 import { useRouter } from 'next/router'
 
-export default function Index() {
+export default function Index(props) {
+
+  console.log(props);
+
   const router = useRouter()
   // AUTH STATE
   const [account, setaccount] = useState("")
@@ -218,4 +221,15 @@ export default function Index() {
 
       </div>
     </div >)
+}
+
+export async function getStaticProps(context) {
+
+  console.log(context);
+
+  return {
+    props: {
+      data: "hello"
+    }
+  }
 }
