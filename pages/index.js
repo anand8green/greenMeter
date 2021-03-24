@@ -3,7 +3,7 @@ import axios from 'axios';
 import moment from 'moment';
 import { useRouter } from 'next/router'
 
-export default function index() {
+export default function Index() {
   const router = useRouter()
   // AUTH STATE
   const [account, setaccount] = useState("")
