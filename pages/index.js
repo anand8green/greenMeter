@@ -1,11 +1,24 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import moment from 'moment';
 import { useRouter } from 'next/router'
 
 export default function Index(props) {
 
-  console.log(props);
+  useEffect(() => {
+
+    if (props.data.account) {
+      setaccount(props.data.account)
+    }
+    if (props.data.email) {
+      setemail(props.data.email)
+    }
+    if (props.data.postcode) {
+      setpostcode(props.data.postcode)
+    }
+
+
+  }, [])
 
   const router = useRouter()
   // AUTH STATE
@@ -45,7 +58,6 @@ export default function Index(props) {
         email: email,
         postcode: postcode
       }).then(res => {
-        console.log(res)
 
         if (res.statusText === "OK") {
           setUser(true),
@@ -135,7 +147,7 @@ export default function Index(props) {
 
               <form className="form" onSubmit={handleSubmit}>
                 <label htmlFor="">Account Number * </label>
-                <input type="text" name="account_number" value={account} onChange={(e) => setaccount(e.target.value)} required />
+                <input type="text" name="account" value={account} onChange={(e) => setaccount(e.target.value)} required />
                 <label htmlFor="">Supply Postcode * </label>
                 <input type="text" name="postcode" value={postcode} onChange={(e) => setpostcode(e.target.value)} required />
                 <label htmlFor="">Email on Account * </label>
@@ -223,13 +235,13 @@ export default function Index(props) {
     </div >)
 }
 
-export async function getStaticProps(context) {
+Index.getInitialProps = async ({ query }) => {
 
-  console.log(context);
+  const account = query.account
+  const postcode = query.postcode
+  const email = query.email
 
   return {
-    props: {
-      data: "hello"
-    }
+    data: { account, postcode, email }
   }
 }
