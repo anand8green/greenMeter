@@ -17,7 +17,6 @@ export default function Index(props) {
       setpostcode(props.data.postcode)
     }
 
-
   }, [])
 
   const router = useRouter()

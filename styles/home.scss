@@ -81,7 +81,6 @@ label {
         overflow: hidden;
         padding: 2rem 3rem;
         margin-bottom: 3rem;
-        //   background-color: #38A9E0;
         display: flex;
         justify-content: space-between;
 
@@ -98,7 +97,6 @@ label {
             background-color: rgba(255, 255, 255, 0.19);
             padding: 0.6rem 1.8rem;
             border-radius: 0.3rem;
-            // margin: 0;
             display: flex;
             align-items: center;
             color: white;
@@ -150,8 +148,7 @@ label {
 }
 
 .main {
-
-    margin: 0 0 5rem 0;
+    margin: 3rem 0 5rem 0;
     padding: 2rem;
     color: #4B494B;
     display: flex;
@@ -170,10 +167,7 @@ label {
             letter-spacing: 0 !important;
         }
 
-        ;
-
         form {
-            //  padding: 2rem;
             width: 35rem;
             margin: 0 auto;
 
@@ -213,7 +207,6 @@ label {
         }
 
         .info {
-            // background-color: blue;
             display: flex;
             justify-content: space-between;
 
@@ -229,7 +222,6 @@ label {
             }
 
             .mpan {
-                //   background-color: darkmagenta;
                 margin-right: 1rem !important
             }
         }
@@ -239,8 +231,6 @@ label {
 .footer {
     color: white;
     border-top: 1px solid #d6d6d6;
-    // border: 10px solid black;
-    // border-color: brown;
     padding: 1rem 0;
     min-height: 10rem;
     display: flex;
@@ -272,7 +262,6 @@ label {
     }
 
     .appBtn {
-        //    background-color: red;
         margin: 0rem 0;
 
         h3 {
@@ -281,7 +270,6 @@ label {
         }
 
         .btnBox {
-            //  background-color: blue;
             margin: -1rem auto;
             display: flex;
             overflow: hidden;
