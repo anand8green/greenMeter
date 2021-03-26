@@ -74,50 +74,38 @@ label {
     background-image: url('../public/trees.jpg');
 
     @media (max-width: 700px) {
-        min-height: 20rem;
+        min-height: 10rem !important;
+
     }
 
     .logo {
         overflow: hidden;
-        padding: 2rem 3rem;
+        padding: 3rem;
         margin-bottom: 3rem;
         display: flex;
         justify-content: space-between;
 
         @media (max-width: 700px) {
-            display: flex;
-            justify-content: center;
+            // display: flex;
+            // justify-content: center;
+            margin: 0;
+            padding: 1rem;
         }
 
         .logoPic {
-            width: 12rem;
+            width: 10rem;
         }
 
-        .signIn {
-            background-color: rgba(255, 255, 255, 0.19);
-            padding: 0.6rem 1.8rem;
-            border-radius: 0.3rem;
-            display: flex;
-            align-items: center;
-            color: white;
-            border: 1px solid white;
-            font-family: Light;
-            font-weight: bold;
+        .signPic {
+            width: 2rem;
             transform: scale(1);
             transition: all 0.2s ease;
 
             &:hover {
-                background-color: #32ae5f93;
-                opacity: 1;
-                transform: scale(1.050);
+                transform: scale(1.1);
             }
-
-            @media (max-width: 700px) {
-                display: none;
-
-            }
-
         }
+
     }
 
     .titleBox {
@@ -128,6 +116,10 @@ label {
         flex-direction: column;
         padding: 2rem;
 
+        @media (max-width: 700px) {
+            padding: 0;
+        }
+
         h1 {
             font-family: Thin;
             font-size: 3rem;
@@ -135,13 +127,18 @@ label {
             margin: 0;
 
             @media (max-width: 700px) {
-                font-size: 2.2rem;
+                font-size: 2rem;
+                margin: 1.8rem 0 0.4rem 0;
             }
         }
 
         p {
             font-size: 1.5rem;
             font-family: thin;
+
+            @media (max-width: 700px) {
+                font-size: 1.2rem;
+            }
         }
     }
 
@@ -239,6 +236,8 @@ label {
 
     @media (max-width: 700px) {
         min-height: 20rem;
+        background-color: rgb(124, 86, 86);
+        flex-direction: column;
     }
 
     .logo {
@@ -248,6 +247,7 @@ label {
         @media (max-width: 700px) {
             display: flex;
             justify-content: center;
+
         }
 
         .logoPic {
@@ -256,9 +256,14 @@ label {
     }
 
     p {
-        padding-right: 3rem;
-        color: gray;
+
         font-family: Thin !important;
+        margin-right: 3rem;
+
+        @media (max-width: 700px) {
+            margin: 3rem 0 1rem 0 !important;
+
+        }
     }
 
     .appBtn {

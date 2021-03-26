@@ -129,10 +129,16 @@ export default function Index(props) {
               <img src="./greenLogo.png" alt="" className="logoPic" />
             </a>
 
-            <a className="signIn"
+            {/* <a className="signIn"
               href="https://members.green.energy/members/home"
-            >Sign in</a>
+            >Sign in</a> */}
+
+            <a href="https://green.energy/">
+              <img src="./sign.png" alt="" className="signPic" />
+            </a>
+
           </div>
+
           <div className="titleBox">
             <h1>Submit meter reading</h1>
             <p>Keep your bills accurate</p>
